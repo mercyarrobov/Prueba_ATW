@@ -59,8 +59,11 @@
                 <input type="number" class="form-control" placeholder="Ingrese telefono" name="telefonoT" />
             </div><br>
             <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ingrese gerente" name="gerenteT" />
+            </div><br>
+            <div class="form-group">
                 <label>Estado</label> <br><br>
-                <select class="form-select" aria-label="Default select example" name="estado">
+                <select class="form-select" aria-label="Default select example" name="estadoT">
                     <option value="1">Normal</option>
                     <option value="2">Caso</option>
                 </select>
@@ -80,6 +83,14 @@
                 <li class="list-group-item">{{ registra_contacto.nombre }}</li>
                 <li class="list-group-item">{{ registra_contacto.telefono }}</li>
                 <li class="list-group-item">{{ registra_contacto.estado }}</li>
+
+                {% endfor %}
+            </ul>
+            <ul class="list-group"><br>
+                {% for registra_tienda in listaT %}
+                <li class="list-group-item">{{ registra_tienda.nombre }}</li>
+                <li class="list-group-item">{{ registra_tienda.telefono }}</li>
+                <li class="list-group-item">{{ registra_tienda.estado }}</li>
 
                 {% endfor %}
             </ul>
